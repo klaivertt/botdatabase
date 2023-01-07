@@ -4,9 +4,20 @@ module.exports = {
     name: 'ping',
     description: 'Commands de ping. Tu crois quoi bg.',
     permission: "Aucune",
-    dm: false,
+    category:"Test",
+    dm: true,
 
     async run(bot, message) {
-        await message.reply(`Ping: \`${bot.ws.ping}\``)
+        
+
+        let Embed = new Discord.EmbedBuilder()
+            .setColor(bot.color)
+            .setThumbnail(bot.user.displayAvatarURL({dynamic: true}))
+            .setTitle(`Ping: \`${bot.ws.ping}\``)
+            .setTimestamp()
+            .setFooter({text:"Ping en ms"})
+            
+            await message.reply({embeds: [Embed]})
     }
+    
 }
