@@ -6,6 +6,7 @@ module.exports = {
     permission: "Aucune",
     category:"Test",
     dm: true,
+    autocomplete: false,
 
     async run(bot, message) {
         

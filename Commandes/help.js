@@ -6,6 +6,8 @@ module.exports = {
     permission: "Aucune",
     category:"Information",
     dm: true,
+    autocomplete: true,
+    
     option:[
         {
             type: "String",
@@ -13,6 +15,8 @@ module.exports = {
             description: 'La commande à afficher',
             dm: true,
             required: false
+            
+
         }
 
     ],

@@ -16,6 +16,7 @@ module.exports = async bot => {
 
         if (command.option?.lenght >= 1) {
             for(let i = 0; i < command.option.lenght; i++) {
+                if(command.option[i].type === "string")slashcommand[`add${command.option[i].type.slice(0, 1).toLowerCase() + command.option[i].type.slice(1, command.option[i].type.length)}Option`](option => option.setName(command.option[i].name).setDescription(command.option[i].description).setAutocomplete(command.option[i].autocomplete).setRequired(command.option[i].required))
                 slashcommand[`add${command.option[i].type.slice(0, 1).toLowerCase() + command.option[i].type.slice(1, command.option[i].type.length)}Option`](option => option.setName(command.option[i].name).setDescription(command.option[i].description).setRequired(command.option[i].required))
             }
         }
