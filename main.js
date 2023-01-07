@@ -8,9 +8,6 @@ const loadDatabase = require("./Loaders/loadDatabase")
 const config = require ("./config")
 
 
-
-
-
 bot.commands = new Discord.Collection()
 bot.color = "#00B6E8"
 bot.db = loadDatabase()
